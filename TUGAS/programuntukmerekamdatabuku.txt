@@ -1,0 +1,49 @@
+//created by muhammad kholifah [A710160108]
+#include <stdio.h>
+
+int a, b, c;
+struct Buku {
+	char judul[50];
+	char penulis[50];
+	int id_buku;
+};
+	
+struct Buku buku_ku[10];
+	
+int main() {
+	
+	printf("DATA BUKU PERPUSTAKAAN : \n\n");
+	printf("Jumlah buku yang akan anda masukkan : "); scanf("%i", &a);
+	
+	for ( b = 1; b <= a; b++ ) {
+		
+		input();
+		
+	}
+	printf("====================================\n\n");
+	printf("Buku yang telah anda masukkan :\n\n");
+	printf("====================================\n\n");
+	for( c = 1; c <= b; c++) {
+		
+		cetak();
+		
+	}
+	return 0;
+}
+
+input() {
+	printf("Data ke-%d\n", b);
+	printf("id_buku \t: "); scanf("%d", &buku_ku[b].id_buku);
+	gets(buku_ku[b].judul);
+	printf("Judul Buku \t: "); gets(buku_ku[b].judul);
+	printf("Penulis \t: "); gets(buku_ku[b].penulis);
+	printf("\n");
+}
+
+cetak() {
+	printf("Data ke-%d\n", c);
+	printf("id_buku \t: %d\n", buku_ku[c].id_buku);
+	printf("Judul Buku \t: %s\n", buku_ku[c].judul);
+	printf("Penulis \t: %s\n", buku_ku[c].penulis);
+	printf("\n");
+}
